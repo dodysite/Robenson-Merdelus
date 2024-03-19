@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MRD MAGIC GRAPHIC</title>
+    <link rel="stylesheet" href="Style1.css">
+    <style>
+        .small-logo {
+            width: 50px; /
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="MRD MAGIC.jpg" alt="Logo MRD MAGIC" class="small-logo">
+        <h1>Réservation</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Informations Personnelles</h2>
+            <form action="traitement_reservation.php" method="post">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="nom" required><br><br>
+                
+                <label for="address">Adresse :</label>
+                <input type="text" id="address" name="adresse" required><br><br>
+                
+                <label for="phone">Téléphone :</label>
+                <input type="tel" id="phone" name="telephone" pattern="[0-9]{10}" required><br><br>
+        </section>
+        <section>
+            <h2>Choix du Service</h2>
+                <label for="service">Choisir un service :</label>
+                <select id="service" name="service">
+                    <option value="Conception de logos">Conception de logos</option>
+                    <option value="Branding et identité visuelle">Branding et identité visuelle</option>
+                    <option value="Conception de sites web">Conception de sites web</option>
+                    <option value="Création d'illustrations personnalisées">Création d'illustrations personnalisées</option>
+                    <option value="Design d'emballages et d'étiquettes">Design d'emballages et d'étiquettes</option>
+                </select><br><br>
+        </section>
+        <section>
+            <h2>Choix du Paiement</h2>
+                <input type="radio" id="card" name="payment" value="card">
+                <label for="card">Carte de Crédit</label><br>
+                <input type="radio" id="paypal" name="payment" value="paypal">
+                <label for="paypal">PayPal</label><br>
+                <input type="radio" id="cash" name="payment" value="cash">
+                <label for="cash">Paiement en espèces</label><br><br>
+                <input type="submit" value="Confirmer la Réservation">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 MRD MAGIC. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
